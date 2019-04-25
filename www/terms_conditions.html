@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Terms &amp; Conditions</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="terms_conditions.css">
+
+    <script src="terms_conditions.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="">My Testbed Name</a>
+    </nav>
+
+    <div class="alert alert-light" role="alert">
+        User: <span id="userurn">?</span>
+    </div>
+    <div class="alert alert-secondary loading" role="alert">
+        <div>
+            Testbed access: <button class="btn btn-sm btn-warning"><i class="fas fa-spinner fa-pulse"></i> Loading...</button>
+        </div>
+    </div>
+
+    <div class="alert alert-danger" role="alert" id="testbed-denied" hidden>
+        <div>
+            Testbed access: <span class="badge badge-danger">Denied</span>
+        </div>
+        <div>
+            <small>(accept the terms to be granted access)</small>
+        </div>
+    </div>
+
+    <div class="alert alert-success" role="alert" id="testbed-allowed" hidden>
+        <div>
+            Testbed access: <span class="badge badge-success">Allowed</span>
+        </div>
+        <div>
+            <small>(valid until <span id="until-date">?</span>)</small>
+        </div>
+    </div>
+
+    <div id="close-jfed-win" class="alert" role="alert" hidden="true">
+        <button class="btn btn-primary" onclick="close_window()">Close this window</button>
+    </div>
+
+    <h1>Terms &amp; Conditions</h1>
+
+    <div class="card mb-3">
+        <div class="card-header">
+            Basic Terms &amp; Conditions
+        </div>
+        <div class="card-body">
+            <p class="card-text">These are some basic terms and conditions</p>
+        </div>
+        <div class="card-footer">
+            <span class="loadedonce">
+                <input id="main_accept" type="checkbox" onchange="on_toggle_accept()"/>
+                <label for="main_accept">I Accept the main terms and conditions</label>
+            </span>
+            <button class="btn btn-sm btn-warning loading"><i class="fas fa-spinner fa-pulse"></i> Loading...</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
